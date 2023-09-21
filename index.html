@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Explore Countries</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body
+    style="
+      background-image: url(./assets/WorldFlag.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  >
+    <div class="container">
+      <div class="mt-5 border-6 mainbox">
+        <select
+          class="form-select mx-auto"
+          style="width: 20rem"
+          aria-label="Default select example"
+          id="country"
+        >
+          <option selected>Select a country...</option>
+        </select>
+
+        <div class="card mt-2 mx-auto" style="display: none" id="displayDiv">
+          <img id="flag" src="" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center" id="cName"></h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="fa-solid fa-globe"></i> Region :
+              <span id="region"></span>
+            </li>
+            <li class="list-group-item">
+              <i class="fa-solid fa-landmark-flag"></i> Capitals :
+              <span id="capitals"></span>
+            </li>
+            <li class="list-group-item">
+              <i class="fa-solid fa-comments"></i> Languages :
+              <span id="languages"></span>
+            </li>
+            <li class="list-group-item">
+              <i class="fa-solid fa-money-bill-wave"></i> Currencies :
+              <span id="currencies"></span>
+            </li>
+            <li class="list-group-item">
+              <i class="fa-solid fa-people-group"></i> Population :
+              <span id="population"></span>
+            </li>
+            <li class="list-group-item">
+              <i class="fa-solid fa-road-barrier"></i> Borders :
+              <span id="borders"></span>
+            </li>
+          </ul>
+          <div class="card-body">
+            <span
+              ><i class="fa-solid fa-map-location-dot"></i> Map :
+              <a
+                class="card-link"
+                style="text-underline-offset: 0.3rem"
+                id="googleMapLink"
+              >
+                Go to google map</a
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="apps.js"></script>
+  </body>
+</html>
